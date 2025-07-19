@@ -47,7 +47,7 @@ if uploaded_file is not None:
 
     # Preprocess image
     img = Image.open(uploaded_file).convert("RGB")
-    img = img.resize((150, 150))
+    img = img.resize((256, 256))
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
 
